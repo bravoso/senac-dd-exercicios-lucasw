@@ -3,6 +3,7 @@
 	<name>senac-dd-exercicios-lucasw</name>
 	<comment></comment>
 	<projects>
+		<project>ExerciciosSenac</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
