@@ -3,14 +3,13 @@ package exercicio06.view;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import net.miginfocom.swing.MigLayout;
 import javax.swing.JButton;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 import javax.swing.JLabel;
 
 public class TelaCalculadora {
@@ -41,8 +40,6 @@ public class TelaCalculadora {
 		initialize();
 	}
 	
-	String input1;
-	String input2;
 	Double valor1;
 	Double valor2;
 	String operacao ="";
@@ -53,8 +50,9 @@ public class TelaCalculadora {
 	private void initialize() {
 		CalculadoraGUI = new JFrame();
 		CalculadoraGUI.setResizable(false);
+		CalculadoraGUI.getContentPane().setBackground(new Color(0, 204, 153));
 		CalculadoraGUI.setTitle("Calculadora");
-		CalculadoraGUI.setBounds(100, 100, 292, 408);
+		CalculadoraGUI.setBounds(100, 100, 292, 306);
 		CalculadoraGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		CalculadoraGUI.getContentPane().setLayout(null);
 		
@@ -67,7 +65,7 @@ public class TelaCalculadora {
 			public void actionPerformed(ActionEvent e) {
 				txtResultado.setText(txtResultado.getText() + "1");			}
 		});
-		button1.setBounds(32, 145, 61, 23);
+		button1.setBounds(26, 145, 61, 23);
 		CalculadoraGUI.getContentPane().add(button1);
 		
 		JButton button2 = new JButton("2");
@@ -76,7 +74,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "2");	
 			}
 		});
-		button2.setBounds(97, 145, 61, 23);
+		button2.setBounds(86, 145, 61, 23);
 		CalculadoraGUI.getContentPane().add(button2);
 		
 		JButton button3 = new JButton("3");
@@ -85,7 +83,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "3");	
 			}
 		});
-		button3.setBounds(168, 145, 47, 23);
+		button3.setBounds(146, 145, 55, 23);
 		CalculadoraGUI.getContentPane().add(button3);
 		
 		JButton button4 = new JButton("4");
@@ -94,7 +92,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "4");	
 			}
 		});
-		button4.setBounds(32, 172, 61, 23);
+		button4.setBounds(26, 172, 61, 23);
 		CalculadoraGUI.getContentPane().add(button4);
 		
 		JButton button5 = new JButton("5");
@@ -103,7 +101,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "5");	
 			}
 		});
-		button5.setBounds(97, 172, 61, 23);
+		button5.setBounds(86, 172, 61, 23);
 		CalculadoraGUI.getContentPane().add(button5);
 		
 		JButton button6 = new JButton("6");
@@ -112,7 +110,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "6");
 			}
 		});
-		button6.setBounds(168, 172, 47, 23);
+		button6.setBounds(146, 172, 55, 23);
 		CalculadoraGUI.getContentPane().add(button6);
 		
 		JButton button7 = new JButton("7");
@@ -122,7 +120,7 @@ public class TelaCalculadora {
 			}
 			
 		});
-		button7.setBounds(32, 199, 61, 23);
+		button7.setBounds(26, 199, 61, 23);
 		CalculadoraGUI.getContentPane().add(button7);
 		
 		JButton button8 = new JButton("8");
@@ -131,7 +129,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "8");	
 			}
 		});
-		button8.setBounds(97, 199, 61, 23);
+		button8.setBounds(86, 199, 61, 23);
 		CalculadoraGUI.getContentPane().add(button8);
 		
 		JButton button9 = new JButton("9");
@@ -140,7 +138,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "9");	
 			}
 		});
-		button9.setBounds(168, 199, 47, 23);
+		button9.setBounds(146, 199, 55, 23);
 		CalculadoraGUI.getContentPane().add(button9);
 		
 		JButton button0 = new JButton("0");
@@ -149,7 +147,7 @@ public class TelaCalculadora {
 				txtResultado.setText(txtResultado.getText() + "0");	
 			}
 		});
-		button0.setBounds(97, 226, 61, 23);
+		button0.setBounds(86, 226, 61, 23);
 		CalculadoraGUI.getContentPane().add(button0);
 		
 		JButton buttonPlus = new JButton("+");
@@ -161,7 +159,7 @@ public class TelaCalculadora {
 				operacao = "somar";
 			}
 		});
-		buttonPlus.setBounds(225, 145, 61, 23);
+		buttonPlus.setBounds(211, 145, 61, 23);
 		CalculadoraGUI.getContentPane().add(buttonPlus);
 		
 		JButton buttonMinus = new JButton("-");
@@ -173,7 +171,7 @@ public class TelaCalculadora {
 				operacao = "subtrair";
 			}
 		});
-		buttonMinus.setBounds(225, 172, 61, 23);
+		buttonMinus.setBounds(211, 172, 61, 23);
 		CalculadoraGUI.getContentPane().add(buttonMinus);
 		
 		JButton buttonDivide = new JButton("/");
@@ -185,7 +183,7 @@ public class TelaCalculadora {
 				operacao = "dividir";
 			}
 		});
-		buttonDivide.setBounds(225, 199, 61, 23);
+		buttonDivide.setBounds(211, 199, 61, 23);
 		CalculadoraGUI.getContentPane().add(buttonDivide);
 		
 		JButton buttonMultiply = new JButton("*");
@@ -197,7 +195,7 @@ public class TelaCalculadora {
 				operacao = "multiplicar";
 			}
 		});
-		buttonMultiply.setBounds(225, 226, 61, 23);
+		buttonMultiply.setBounds(211, 226, 61, 23);
 		CalculadoraGUI.getContentPane().add(buttonMultiply);
 		
 		JButton buttonDot = new JButton(".");
@@ -207,11 +205,13 @@ public class TelaCalculadora {
 				
 			}
 		});
-		buttonDot.setBounds(168, 226, 47, 23);
+		buttonDot.setBounds(146, 226, 55, 23);
 		CalculadoraGUI.getContentPane().add(buttonDot);
 		
 		txtResultado = new JTextField();
-		txtResultado.setBounds(50, 89, 200, 20);
+		txtResultado.setFont(new Font("Impact", Font.PLAIN, 14));
+		txtResultado.setBackground(new Color(255, 204, 204));
+		txtResultado.setBounds(25, 59, 247, 37);
 		CalculadoraGUI.getContentPane().add(txtResultado);
 		txtResultado.setColumns(10);
 
@@ -239,8 +239,28 @@ public class TelaCalculadora {
 				};
 			}
 		});
-		Equals.setBounds(225, 275, 61, 23);
+		Equals.setBounds(26, 226, 61, 23);
 		CalculadoraGUI.getContentPane().add(Equals);
+		
+		JButton btnClear = new JButton("C");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String t = "";
+				valor1 =0.0;
+				valor2 =0.0;
+				txtResultado.setText(t);
+			}
+		});
+		btnClear.setBounds(26, 111, 61, 23);
+		CalculadoraGUI.getContentPane().add(btnClear);
+		
+		JLabel lblEstaCalculadoraCalcula = new JLabel("Esta calculadora calcula apenas dois valores.");
+		lblEstaCalculadoraCalcula.setBounds(7, 11, 279, 14);
+		CalculadoraGUI.getContentPane().add(lblEstaCalculadoraCalcula);
+		
+		JLabel lblResultado = new JLabel("Resultado:");
+		lblResultado.setBounds(24, 45, 97, 14);
+		CalculadoraGUI.getContentPane().add(lblResultado);
 	}
 
 
