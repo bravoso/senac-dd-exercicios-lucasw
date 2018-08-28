@@ -43,7 +43,7 @@ public class InterfacePrincipal {
 			}
 			;
 
-		} while (decisao = true);
+		} while (decisao == true);
 		switch (opcao) {
 		case 1:
 			CadastroProduto();
@@ -64,10 +64,11 @@ public class InterfacePrincipal {
 		return null;
 	}
 
+
 	private static void ConsultarFuncionario() {
 		JFrame frame = new JFrame("Cadastro Funcionario");
 		frame.setVisible(true);
-		frame.setSize(310, 271);
+		frame.setSize(310, 350);
 		frame.setResizable(false);
 		JPanel painelCadastroFuncionario = new JPanel();
 		painelCadastroFuncionario.setLayout(null);
@@ -93,18 +94,20 @@ public class InterfacePrincipal {
 		painelCadastroFuncionario.add(textField_1);
 
 		JButton btnCadastrar = new JButton("Consultar");
-		btnCadastrar.setBounds(104, 191, 89, 23);
+		btnCadastrar.setBounds(68, 287, 153, 23);
 		painelCadastroFuncionario.add(btnCadastrar);
 
 		frame.getContentPane().add(painelCadastroFuncionario);
 
 	}
 
+	
+
 	private static void ConsultarProduto() {
 		JFrame frmCadastroProduto = new JFrame("Cadastro Funcionario");
 		frmCadastroProduto.setTitle("Consultar produto");
 		frmCadastroProduto.setVisible(true);
-		frmCadastroProduto.setSize(310, 489);
+		frmCadastroProduto.setSize(310, 509);
 		frmCadastroProduto.setResizable(false);
 		JPanel painelCadastroFuncionario = new JPanel();
 		painelCadastroFuncionario.setLayout(null);
@@ -130,7 +133,7 @@ public class InterfacePrincipal {
 		painelCadastroFuncionario.add(textField_1);
 
 		JButton btnCadastrar = new JButton("Consultar");
-		btnCadastrar.setBounds(100, 426, 89, 23);
+		btnCadastrar.setBounds(80, 446, 133, 23);
 		painelCadastroFuncionario.add(btnCadastrar);
 
 		frmCadastroProduto.getContentPane().add(painelCadastroFuncionario);
@@ -166,11 +169,12 @@ public class InterfacePrincipal {
 		painelCadastroFuncionario.add(lblDigiteOId);
 	}
 
+	
 	private static void CadastroFuncionario() {
 		JFrame frame = new JFrame("Cadastro Funcionario");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-		frame.setSize(310, 271);
+		frame.setSize(310, 350);
 		frame.setResizable(false);
 		JPanel painelCadastroFuncionario = new JPanel();
 		painelCadastroFuncionario.setLayout(null);
@@ -196,17 +200,18 @@ public class InterfacePrincipal {
 		painelCadastroFuncionario.add(textField_1);
 
 		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setBounds(104, 191, 89, 23);
+		btnCadastrar.setBounds(73, 287, 144, 23);
 		painelCadastroFuncionario.add(btnCadastrar);
 
 		frame.getContentPane().add(painelCadastroFuncionario);
 	}
 
+
 	private static void CadastroProduto() {
 		JFrame frmCadastroProduto = new JFrame("Cadastro Funcionario");
 		frmCadastroProduto.setTitle("Cadastro Produto");
 		frmCadastroProduto.setVisible(true);
-		frmCadastroProduto.setSize(310, 422);
+		frmCadastroProduto.setSize(310, 462);
 		frmCadastroProduto.setResizable(false);
 		JPanel painelCadastroFuncionario = new JPanel();
 		painelCadastroFuncionario.setLayout(null);
@@ -232,7 +237,7 @@ public class InterfacePrincipal {
 		painelCadastroFuncionario.add(textField_1);
 
 		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setBounds(100, 359, 89, 23);
+		btnCadastrar.setBounds(74, 399, 136, 23);
 		painelCadastroFuncionario.add(btnCadastrar);
 
 		frmCadastroProduto.getContentPane().add(painelCadastroFuncionario);
