@@ -10,10 +10,8 @@ package main.java.exercicio05.controller;
  * @author Lucas Willuweit
  */
 public class ControladoraFuncionario {
-    String nome;
-    public String CadastroFuncionario(nome){
-     
+    
+    public static void CadastroFuncionario(String nome, String CPF) {
         
-        return null;
     }
 }
