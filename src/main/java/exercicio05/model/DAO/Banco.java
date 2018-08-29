@@ -51,11 +51,11 @@ import java.sql.Statement;
  */
 public class Banco {
 
-	private static final String DRIVER_MYSQL = "com.mysql.jdbc.Driver";
-	private static final String NOME_ESQUEMA = "db_dev_desktop_20182";
-	private static final String URL_CONEXAO = "jdbc:mysql://localhost:3306/" + NOME_ESQUEMA;
+	private static final String DRIVER_MYSQL = "com.mysql.cj.jdbc.Driver";
+	private static final String NOME_ESQUEMA = "mercado";
+	private static final String URL_CONEXAO = "jdbc:mysql://localhost:3306/" + NOME_ESQUEMA + "?useSSL=false&useTimezone=true&serverTimezone=UTC";
 	private static final String USUARIO = "root";
-	private static final String SENHA = "";
+	private static final String SENHA = "root";
 
 	/**
 	 * Estabelece a conexão JBDC considerando as configurações da classe Banco.

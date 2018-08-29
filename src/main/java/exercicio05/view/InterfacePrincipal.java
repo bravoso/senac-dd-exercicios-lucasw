@@ -41,9 +41,8 @@ public class InterfacePrincipal {
 				JOptionPane.showMessageDialog(null, "Opção inválida, por favor digite um número inteiro");
 
 			}
-			;
 
-		} while (decisao = true);
+		} while (decisao == true);
 		switch (opcao) {
 		case 1:
 			CadastroProduto();
