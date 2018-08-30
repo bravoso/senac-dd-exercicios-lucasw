@@ -13,61 +13,49 @@ import exercicio05.model.VO.FuncionarioVO;
  * @author Lucas Willuweit
  */
 public class ControladoraFuncionario {
-    
-<<<<<<< HEAD
-   
-    	FuncionarioBO bo = new FuncionarioBO();
 
-    	public String salvar(FuncionarioVO funcionario) {
-    		String validacao = validarFuncionario(funcionario);
+	FuncionarioBO bo = new FuncionarioBO();
 
-    		if(validacao == "") {
-    			if(funcionario.getIdFuncionario() > 0) {
-    				//INSERT
-    				if(bo.atualizar(funcionario)) {
-    					validacao = "Produto atualizado com sucesso!";
-    				}else {
-    					validacao = "Erro ao atualizar produto";
-    				}
-    			}else {
-    				//INSERT
-    				if(bo.inserir(funcionario)) {
-    					validacao = "Produto salvo com sucesso!";
-    				}else {
-    					validacao = "Erro ao salvar produto";
-    				}
-    			}
-    		}
+	public String salvar(FuncionarioVO funcionario) {
+		String validacao = validarFuncionario(funcionario);
 
-    		return validacao;
-    	};
+		if (validacao == "") {
+			if (funcionario.getIdFuncionario() > 0) {
+				// INSERT
+				if (bo.atualizar(funcionario)) {
+					validacao = "Produto atualizado com sucesso!";
+				} else {
+					validacao = "Erro ao atualizar produto";
+				}
+			} else {
+				// INSERT
+				if (bo.inserir(funcionario)) {
+					validacao = "Produto salvo com sucesso!";
+				} else {
+					validacao = "Erro ao salvar produto";
+				}
+			}
+		}
 
-    	private String validarFuncionario(FuncionarioVO funcionario) {
-    		String validacao = "";
+		return validacao;
+	};
 
-    		if(funcionario == null) {
-    			validacao = "Funcionario está NULO!";
-    		}else {
-    			//Validar o preenchimento
-    			if(funcionario.getNome().trim().equals("")) {
-    				validacao += "- Nome é obrigatório \n";
-    			}
-    			if(funcionario.getCpf().trim().equals("")) {
-    				validacao += "- CPF é obrigatório \n";
-    			}
-    		}
-    		return validacao;
-    	}
-=======
-    public static void CadastroFuncionario(String nome, String CPF) {
->>>>>>> branch 'master' of https://github.com/bravoso/senac-dd-exercicios-lucasw.git
-        
-<<<<<<< HEAD
-      
-    
+	private String validarFuncionario(FuncionarioVO funcionario) {
+		String validacao = "";
+
+		if (funcionario == null) {
+			validacao = "Funcionario está NULO!";
+		} else {
+			// Validar o preenchimento
+			if (funcionario.getNome().trim().equals("")) {
+				validacao += "- Nome é obrigatório \n";
+			}
+			if (funcionario.getCpf().trim().equals("")) {
+				validacao += "- CPF é obrigatório \n";
+			}
+		}
+		return validacao;
+	}
+
 
 }
-=======
-    }
-}
->>>>>>> branch 'master' of https://github.com/bravoso/senac-dd-exercicios-lucasw.git

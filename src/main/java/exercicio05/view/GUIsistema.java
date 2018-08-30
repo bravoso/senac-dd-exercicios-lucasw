@@ -6,15 +6,11 @@
 package exercicio05.view;
 
 import exercicio05.model.DAO.Banco;
-<<<<<<< HEAD
 import exercicio05.model.VO.FuncionarioVO;
 
 import javax.swing.JOptionPane;
 
 import exercicio05.controller.ControladoraFuncionario;
-=======
-import main.java.exercicio05.controller.ControladoraFuncionario;
->>>>>>> branch 'master' of https://github.com/bravoso/senac-dd-exercicios-lucasw.git
 
 /**
  *
@@ -305,7 +301,6 @@ public class GUIsistema extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIDActionPerformed
 
     private void btnAdicionarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarMouseClicked
-<<<<<<< HEAD
     	ControladoraFuncionario controlador = new ControladoraFuncionario();
 		FuncionarioVO funcionario = construirFuncionario();
 
@@ -316,14 +311,9 @@ public class GUIsistema extends javax.swing.JFrame {
 
 
 	private void btnRemoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoverMouseClicked
-=======
         ControladoraFuncionario.CadastroFuncionario(txtNome.getText(),txtCPF.getText());
     }//GEN-LAST:event_btnAdicionarMouseClicked
 
-    private void btnRemoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoverMouseClicked
->>>>>>> branch 'master' of https://github.com/bravoso/senac-dd-exercicios-lucasw.git
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRemoverMouseClicked
 
     private void btnAtualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizarMouseClicked
         // TODO add your handling code here:
