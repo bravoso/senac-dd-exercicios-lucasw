@@ -2,44 +2,44 @@ package exercicio05.model.VO;
 
 public class FuncionarioVO {
 
-	private int id;
+	private int idFuncionario;
 	private String nome;
-	private String CPF;
-
-	public int getId() {
-		return id;
+	private String numeroMatricula;
+	private String cpf;
+	
+	public FuncionarioVO() {
+		
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	
+	public FuncionarioVO(String nome, String numeroMatricula, String cpf) {
+		super();
+		this.nome = nome;
+		this.numeroMatricula = numeroMatricula;
+		this.cpf = cpf;
 	}
-
+	public int getIdFuncionario() {
+		return idFuncionario;
+	}
+	public void setIdFuncionario(int idFuncionario) {
+		this.idFuncionario = idFuncionario;
+	}
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public String getCPF() {
-		return CPF;
+	public String getNumeroMatricula() {
+		return numeroMatricula;
 	}
-
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setNumeroMatricula(String numeroMatricula) {
+		this.numeroMatricula = numeroMatricula;
 	}
-
-	public FuncionarioVO(int id, String nome, String cPF) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		CPF = cPF;
+	public String getCpf() {
+		return cpf;
 	}
-
-	public FuncionarioVO() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 }

@@ -3,9 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.exercicio05.view;
+package exercicio05.view;
 
 import exercicio05.model.DAO.Banco;
+import exercicio05.model.VO.FuncionarioVO;
+
+import javax.swing.JOptionPane;
+
+import exercicio05.controller.ControladoraFuncionario;
 
 /**
  *
@@ -13,6 +18,7 @@ import exercicio05.model.DAO.Banco;
  */
 public class GUIsistema extends javax.swing.JFrame {
 
+	private FuncionarioVO funcionario = new FuncionarioVO();
     /**
      * Creates new form GUIsistema
      */
@@ -98,6 +104,11 @@ public class GUIsistema extends javax.swing.JFrame {
         jLabel4.setText("Matricula:");
 
         btnAdicionar.setText("Adicionar");
+        btnAdicionar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdicionarMouseClicked(evt);
+            }
+        });
         btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicionarActionPerformed(evt);
@@ -105,6 +116,11 @@ public class GUIsistema extends javax.swing.JFrame {
         });
 
         btnAtualizar.setText("Atualizar");
+        btnAtualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAtualizarMouseClicked(evt);
+            }
+        });
         btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtualizarActionPerformed(evt);
@@ -112,6 +128,11 @@ public class GUIsistema extends javax.swing.JFrame {
         });
 
         btnRemover.setText("Remover");
+        btnRemover.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRemoverMouseClicked(evt);
+            }
+        });
         btnRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoverActionPerformed(evt);
@@ -162,7 +183,7 @@ public class GUIsistema extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -215,9 +236,9 @@ public class GUIsistema extends javax.swing.JFrame {
             jPanelFuncionárioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFuncionárioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -234,7 +255,7 @@ public class GUIsistema extends javax.swing.JFrame {
         );
         jPanelProdutoLayout.setVerticalGroup(
             jPanelProdutoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 416, Short.MAX_VALUE)
+            .addGap(0, 432, Short.MAX_VALUE)
         );
 
         jTabbedPaneProduto.addTab("Produto", jPanelProduto);
@@ -252,7 +273,7 @@ public class GUIsistema extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPaneProduto)
+                .addComponent(jTabbedPaneProduto, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -278,6 +299,24 @@ public class GUIsistema extends javax.swing.JFrame {
     private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIDActionPerformed
+
+    private void btnAdicionarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarMouseClicked
+    	ControladoraFuncionario controlador = new ControladoraFuncionario();
+		FuncionarioVO funcionario = construirFuncionario();
+
+		String mensagem = controlador.salvar(funcionario);
+		JOptionPane.showMessageDialog(null, mensagem);
+		limparTela();
+    }//GEN-LAST:event_btnAdicionarMouseClicked
+
+
+	private void btnRemoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoverMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRemoverMouseClicked
+
+    private void btnAtualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAtualizarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -336,4 +375,18 @@ public class GUIsistema extends javax.swing.JFrame {
     private javax.swing.JTextField txtMatricula;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
+    private FuncionarioVO construirFuncionario() {
+    	funcionario.setNome(txtNome.getText());
+		funcionario.setNumeroMatricula(txtMatricula.getText());
+		funcionario.setCpf(txtCPF.getText());
+		
+		return funcionario;
+    }
+    protected void limparTela() {
+		funcionario = new FuncionarioVO();
+		txtCPF.setText("");
+		txtNome.setText("");
+		txtMatricula.setText("");
+		txtID.setText("");
+	}
 }
