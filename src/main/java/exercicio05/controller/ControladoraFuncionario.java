@@ -14,6 +14,7 @@ import exercicio05.model.VO.FuncionarioVO;
  */
 public class ControladoraFuncionario {
     
+<<<<<<< HEAD
    
     	FuncionarioBO bo = new FuncionarioBO();
 
@@ -57,8 +58,16 @@ public class ControladoraFuncionario {
     		}
     		return validacao;
     	}
+=======
+    public static void CadastroFuncionario(String nome, String CPF) {
+>>>>>>> branch 'master' of https://github.com/bravoso/senac-dd-exercicios-lucasw.git
         
+<<<<<<< HEAD
       
     
 
 }
+=======
+    }
+}
+>>>>>>> branch 'master' of https://github.com/bravoso/senac-dd-exercicios-lucasw.git
