@@ -67,7 +67,7 @@ public class GUIsistema extends javax.swing.JFrame {
         txtNomeProduto = new javax.swing.JTextField();
         txtCodBarras = new javax.swing.JTextField();
         txtFabricante = new javax.swing.JTextField();
-        txtCusto = new javax.swing.JTextField();
+        txtPeso = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
@@ -298,7 +298,7 @@ public class GUIsistema extends javax.swing.JFrame {
             }
         });
 
-        txtCusto.setMinimumSize(new java.awt.Dimension(6, 35));
+        txtPeso.setMinimumSize(new java.awt.Dimension(6, 35));
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel29.setText("Nome:");
@@ -310,7 +310,7 @@ public class GUIsistema extends javax.swing.JFrame {
         jLabel31.setText("Código de Barras:");
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel32.setText("Preço de custo:");
+        jLabel32.setText("Peso:");
 
         btnAdicionarProduto.setText("Adicionar");
         btnAdicionarProduto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -390,7 +390,7 @@ public class GUIsistema extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtFabricante, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                            .addComponent(txtCusto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtPeso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.LEADING)
@@ -417,7 +417,7 @@ public class GUIsistema extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCusto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel36)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -542,7 +542,7 @@ public class GUIsistema extends javax.swing.JFrame {
 		produto.setNome(txtNomeProduto.getText());
 		produto.setFabricante(txtFabricante.getText());
 		produto.setValor(Double.parseDouble(txtPrecoVenda.getText()));
-		produto.setPeso(Double.parseDouble(txtCusto.getText()));
+		produto.setPeso(Double.parseDouble(txtPeso.getText()));
 	
 		return produto;
 	}
@@ -626,12 +626,12 @@ public class GUIsistema extends javax.swing.JFrame {
     private javax.swing.JList<String> lstResultadosProduto;
     private javax.swing.JTextField txtCPF;
     private javax.swing.JTextField txtCodBarras;
-    private javax.swing.JTextField txtCusto;
     private javax.swing.JTextField txtFabricante;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtMatricula;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNomeProduto;
+    private javax.swing.JTextField txtPeso;
     private javax.swing.JTextField txtPrecoVenda;
     // End of variables declaration//GEN-END:variables
     private FuncionarioVO construirFuncionario() {
@@ -649,7 +649,7 @@ public class GUIsistema extends javax.swing.JFrame {
         txtMatricula.setText("");
         txtID.setText("");
         txtCodBarras.setText("");
-        txtCusto.setText("");
+        txtPeso.setText("");
         txtFabricante.setText("");
         txtNomeProduto.setText("");
         txtPrecoVenda.setText("");
