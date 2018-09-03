@@ -450,7 +450,7 @@
                                   <EmptySpace pref="72" max="32767" attributes="0"/>
                                   <Component id="jLabel34" min="-2" pref="11" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnRemoverProduto" min="-2" pref="139" max="-2" attributes="0"/>
+                                  <Component id="btnRemoveProduto" min="-2" pref="139" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                   <Component id="jLabel33" min="-2" pref="11" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -511,7 +511,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btnAdicionarProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnAtualizarProduto" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnRemoverProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnRemoveProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel34" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                               <Component id="jLabel33" alignment="3" max="32767" attributes="0"/>
                               <Component id="jLabel35" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
@@ -606,13 +606,13 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAtualizarProdutoActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnRemoverProduto">
+                <Component class="javax.swing.JButton" name="btnRemoveProduto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Remover"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnRemoverProdutoMouseClicked"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoverProdutoActionPerformed"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnRemoveProdutoMouseClicked"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRemoveProdutoActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel33">

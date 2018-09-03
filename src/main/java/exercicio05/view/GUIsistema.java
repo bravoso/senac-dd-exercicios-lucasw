@@ -71,7 +71,7 @@ public class GUIsistema extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         btnAdicionarProduto = new javax.swing.JButton();
         btnAtualizarProduto = new javax.swing.JButton();
-        btnRemoverProduto = new javax.swing.JButton();
+        btnRemoveProduto = new javax.swing.JButton();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
@@ -333,15 +333,15 @@ public class GUIsistema extends javax.swing.JFrame {
             }
         });
 
-        btnRemoverProduto.setText("Remover");
-        btnRemoverProduto.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnRemoveProduto.setText("Remover");
+        btnRemoveProduto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnRemoverProdutoMouseClicked(evt);
+                btnRemoveProdutoMouseClicked(evt);
             }
         });
-        btnRemoverProduto.addActionListener(new java.awt.event.ActionListener() {
+        btnRemoveProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoverProdutoActionPerformed(evt);
+                btnRemoveProdutoActionPerformed(evt);
             }
         });
 
@@ -372,7 +372,7 @@ public class GUIsistema extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                         .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnRemoverProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRemoveProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
                         .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -423,7 +423,7 @@ public class GUIsistema extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdicionarProduto)
                     .addComponent(btnAtualizarProduto)
-                    .addComponent(btnRemoverProduto)
+                    .addComponent(btnRemoveProduto)
                     .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -510,13 +510,13 @@ public class GUIsistema extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void btnRemoverProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverProdutoActionPerformed
+    private void btnRemoveProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveProdutoActionPerformed
         // REMOVER PRODUTO
-    }//GEN-LAST:event_btnRemoverProdutoActionPerformed
+    }//GEN-LAST:event_btnRemoveProdutoActionPerformed
 
-    private void btnRemoverProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoverProdutoMouseClicked
+    private void btnRemoveProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoveProdutoMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRemoverProdutoMouseClicked
+    }//GEN-LAST:event_btnRemoveProdutoMouseClicked
 
     private void btnAtualizarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarProdutoActionPerformed
         // ATUALIZAR O PRODUTO
@@ -582,8 +582,8 @@ public class GUIsistema extends javax.swing.JFrame {
     private javax.swing.JButton btnAdicionarProduto;
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnAtualizarProduto;
+    private javax.swing.JButton btnRemoveProduto;
     private javax.swing.JButton btnRemover;
-    private javax.swing.JButton btnRemoverProduto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel29;
