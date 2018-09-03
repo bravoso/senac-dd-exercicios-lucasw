@@ -1,17 +1,17 @@
 package exercicio05.model.VO;
 
-public class FuncionarioVO {
+public class Funcionario {
 
 	private int idFuncionario;
 	private String nome;
 	private String numeroMatricula;
 	private String cpf;
 	
-	public FuncionarioVO() {
+	public Funcionario() {
 		
 	}
 	
-	public FuncionarioVO(String nome, String numeroMatricula, String cpf) {
+	public Funcionario(String nome, String numeroMatricula, String cpf) {
 		super();
 		this.nome = nome;
 		this.numeroMatricula = numeroMatricula;

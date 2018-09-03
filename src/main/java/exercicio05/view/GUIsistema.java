@@ -8,7 +8,7 @@ package exercicio05.view;
 import exercicio05.model.BO.ProdutoBO;
 import exercicio05.model.DAO.Banco;
 import exercicio05.model.DAO.ProdutoDAO;
-import exercicio05.model.VO.FuncionarioVO;
+import exercicio05.model.VO.Funcionario;
 import exercicio05.model.VO.Produto;
 
 import javax.swing.JOptionPane;
@@ -22,7 +22,7 @@ import exercicio05.controller.ControladoraProduto;
  */
 public class GUIsistema extends javax.swing.JFrame {
 
-	private FuncionarioVO funcionario = new FuncionarioVO();
+	private Funcionario funcionario = new Funcionario();
 	private Produto produto = new Produto();
 	private ProdutoBO bo = new ProdutoBO();
 
@@ -541,7 +541,7 @@ public class GUIsistema extends javax.swing.JFrame {
 
 	private void btnAdicionarMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_btnAdicionarMouseClicked
 		ControladoraFuncionario controlador = new ControladoraFuncionario();
-		FuncionarioVO funcionario = construirFuncionario();
+		Funcionario funcionario = construirFuncionario();
 
 		String mensagem = controlador.salvar(funcionario);
 		JOptionPane.showMessageDialog(null, mensagem);
@@ -704,7 +704,7 @@ public class GUIsistema extends javax.swing.JFrame {
 	private javax.swing.JTextField txtPrecoVenda;
 
 	// End of variables declaration//GEN-END:variables
-	private FuncionarioVO construirFuncionario() {
+	private Funcionario construirFuncionario() {
 		funcionario.setNome(txtNome.getText());
 		funcionario.setNumeroMatricula(txtMatricula.getText());
 		funcionario.setCpf(txtCPF.getText());
@@ -713,7 +713,7 @@ public class GUIsistema extends javax.swing.JFrame {
 	}
 
 	protected void limparTela() {
-		funcionario = new FuncionarioVO();
+		funcionario = new Funcionario();
 		txtCPF.setText("");
 		txtNome.setText("");
 		txtMatricula.setText("");

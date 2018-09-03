@@ -8,11 +8,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import exercicio05.model.DAO.BaseDAO;
-import exercicio05.model.VO.FuncionarioVO;
+import exercicio05.model.VO.Funcionario;
 
-public class FuncionarioDAO extends BaseDAO<FuncionarioVO>{
+public class FuncionarioDAO extends BaseDAO<Funcionario>{
 
-	public int inserir(FuncionarioVO p){
+	public int inserir(Funcionario p){
 		int novoId = -1;
 
 		String sql = " INSERT INTO FUNCIONARIO (NOME, MATRICULA, CPF) "
@@ -43,7 +43,7 @@ public class FuncionarioDAO extends BaseDAO<FuncionarioVO>{
 		return novoId;
 	}
 
-	public boolean atualizar(FuncionarioVO p){
+	public boolean atualizar(Funcionario p){
 		boolean sucessoUpdate = false;
 
 		String sql = " UPDATE FUNCIONARIO P SET NOME=?, MATRICULA=?, CPF=? "
@@ -102,18 +102,18 @@ public class FuncionarioDAO extends BaseDAO<FuncionarioVO>{
 		return sucessoDelete;
 	}
 	
-	public ArrayList<FuncionarioVO> listarTodos(){
+	public ArrayList<Funcionario> listarTodos(){
 		String sql = " SELECT * FROM FUNCIONARIO ";
 		
 		Connection conexao = Banco.getConnection();
 		PreparedStatement prepStmt = Banco.getPreparedStatement(conexao, sql);
-		ArrayList<FuncionarioVO> produtos = new ArrayList<FuncionarioVO>();
+		ArrayList<Funcionario> produtos = new ArrayList<Funcionario>();
 		
 		try {
 			ResultSet result = prepStmt.executeQuery(sql);
 			
 			while(result.next()){
-				FuncionarioVO p = new FuncionarioVO();
+				Funcionario p = new Funcionario();
 				
 				//Obtendo valores pelo NOME DA COLUNA
 				p.setIdFuncionario(result.getInt("ID"));
@@ -135,20 +135,20 @@ public class FuncionarioDAO extends BaseDAO<FuncionarioVO>{
 	 * @return um produto caso o id exista na tabela Produto
 	 * 		   null caso contrário
 	 */
-	public FuncionarioVO obterPorId(int id){
+	public Funcionario obterPorId(int id){
 		String sql = " SELECT * FROM FUNCIONARIO "
 				+ " WHERE ID=?";
 		
 		Connection conexao = Banco.getConnection();
 		PreparedStatement prepStmt = Banco.getPreparedStatement(conexao, sql);
-		FuncionarioVO p = null;
+		Funcionario p = null;
 		
 		try {
 			prepStmt.setInt(1, id);
 			ResultSet result = prepStmt.executeQuery();
 			
 			while(result.next()){
-				p = new FuncionarioVO();
+				p = new Funcionario();
 				
 				//Obtendo valores pelo NOME DA COLUNA
 				p.setIdFuncionario(result.getInt("ID"));
@@ -187,25 +187,25 @@ public class FuncionarioDAO extends BaseDAO<FuncionarioVO>{
 	}
 
 	@Override
-	public void setValoresAtributosInsert(FuncionarioVO entidade, PreparedStatement preparedStmt) {
+	public void setValoresAtributosInsert(Funcionario entidade, PreparedStatement preparedStmt) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public String getValoresClausulaSetUpdate(FuncionarioVO entidade) {
+	public String getValoresClausulaSetUpdate(Funcionario entidade) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setValoresAtributosUpdate(FuncionarioVO entidade, PreparedStatement stmt) {
+	public void setValoresAtributosUpdate(Funcionario entidade, PreparedStatement stmt) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public FuncionarioVO construirObjetoDoResultSet(ResultSet resultado) {
+	public Funcionario construirObjetoDoResultSet(ResultSet resultado) {
 		// TODO Auto-generated method stub
 		return null;
 	}

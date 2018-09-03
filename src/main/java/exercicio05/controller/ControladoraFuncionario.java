@@ -6,7 +6,7 @@
 package exercicio05.controller;
 
 import exercicio05.model.BO.FuncionarioBO;
-import exercicio05.model.VO.FuncionarioVO;
+import exercicio05.model.VO.Funcionario;
 
 /**
  *
@@ -16,7 +16,7 @@ public class ControladoraFuncionario {
 
 	FuncionarioBO bo = new FuncionarioBO();
 
-	public String salvar(FuncionarioVO funcionario) {
+	public String salvar(Funcionario funcionario) {
 		String validacao = validarFuncionario(funcionario);
 
 		if (validacao == "") {
@@ -40,7 +40,7 @@ public class ControladoraFuncionario {
 		return validacao;
 	};
 
-	private String validarFuncionario(FuncionarioVO funcionario) {
+	private String validarFuncionario(Funcionario funcionario) {
 		String validacao = "";
 
 		if (funcionario == null) {
