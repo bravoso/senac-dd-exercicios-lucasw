@@ -474,7 +474,7 @@ public class GUIsistema extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
-        // TODO add your handling code here:
+        // REMOVER FUNCIONARIO
     }//GEN-LAST:event_btnRemoverActionPerformed
 
     private void btnRemoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoverMouseClicked
@@ -482,7 +482,7 @@ public class GUIsistema extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRemoverMouseClicked
 
     private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
-        // TODO add your handling code here:
+        // ATUALIZAR FUNCIONARIO
     }//GEN-LAST:event_btnAtualizarActionPerformed
 
     private void btnAtualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizarMouseClicked
@@ -511,7 +511,7 @@ public class GUIsistema extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void btnRemover4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemover4ActionPerformed
-        // TODO add your handling code here:
+        // REMOVER PRODUTO
     }//GEN-LAST:event_btnRemover4ActionPerformed
 
     private void btnRemover4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemover4MouseClicked
@@ -519,7 +519,7 @@ public class GUIsistema extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRemover4MouseClicked
 
     private void btnAtualizar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizar4ActionPerformed
-        // TODO add your handling code here:
+        // ATUALIZAR O PRODUTO
     }//GEN-LAST:event_btnAtualizar4ActionPerformed
 
     private void btnAtualizar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizar4MouseClicked
@@ -527,7 +527,7 @@ public class GUIsistema extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtualizar4MouseClicked
 
     private void btnAdicionar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionar4ActionPerformed
-        // TODO add your handling code here:
+       //ADICIONAR PRODUTO
     }//GEN-LAST:event_btnAdicionar4ActionPerformed
 
     private void btnAdicionar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionar4MouseClicked
