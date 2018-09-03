@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.exercicio05.view;
+package exercicio05.view;
 
 import exercicio05.model.DAO.Banco;
 import exercicio05.model.VO.FuncionarioVO;
