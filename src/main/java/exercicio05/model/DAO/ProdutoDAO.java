@@ -159,10 +159,9 @@ public class ProdutoDAO {
 				p.setId(result.getInt("ID"));
 				p.setNome(result.getString("NOME"));
 				p.setFabricante(result.getString("FABRICANTE"));
+				p.setPeso(result.getDouble("PESO"));
+				p.setValor(result.getDouble("VALOR"));
 				
-				//Outra forma de obter (POSICIONAL)
-				p.setValor(result.getDouble(4));
-				p.setPeso(result.getDouble(5));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
