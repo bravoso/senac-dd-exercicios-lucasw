@@ -7,10 +7,12 @@ package exercicio05.view;
 
 import exercicio05.model.DAO.Banco;
 import exercicio05.model.VO.FuncionarioVO;
+import exercicio05.model.VO.Produto;
 
 import javax.swing.JOptionPane;
 
 import exercicio05.controller.ControladoraFuncionario;
+import exercicio05.controller.ControladoraProduto;
 
 /**
  *
@@ -19,6 +21,7 @@ import exercicio05.controller.ControladoraFuncionario;
 public class GUIsistema extends javax.swing.JFrame {
 
     private FuncionarioVO funcionario = new FuncionarioVO();
+    private Produto produto = new Produto();
 
     /**
      * Creates new form GUIsistema
@@ -527,10 +530,23 @@ public class GUIsistema extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtualizarProdutoMouseClicked
 
     private void btnAdicionarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarProdutoActionPerformed
-       //ADICIONAR PRODUTO
+       ControladoraProduto controller = new ControladoraProduto();
+       Produto produto = construirProduto();
+       
+       String mensagem = controller.salvar(produto);
+       JOptionPane.showMessageDialog(null, mensagem);
+       limparTela();
     }//GEN-LAST:event_btnAdicionarProdutoActionPerformed
 
-    private void btnAdicionarProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarProdutoMouseClicked
+	public Produto construirProduto() {
+		produto.setNome(txtNomeProduto.getText());
+		produto.setFabricante(txtFabricante.getText());
+		produto.setValor(Double.parseDouble(txtPrecoVenda.getText()));
+		produto.setPeso(Double.parseDouble(txtCusto.getText()));
+	
+		return produto;
+	}
+	private void btnAdicionarProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarProdutoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAdicionarProdutoMouseClicked
 
@@ -632,5 +648,10 @@ public class GUIsistema extends javax.swing.JFrame {
         txtNome.setText("");
         txtMatricula.setText("");
         txtID.setText("");
+        txtCodBarras.setText("");
+        txtCusto.setText("");
+        txtFabricante.setText("");
+        txtNomeProduto.setText("");
+        txtPrecoVenda.setText("");
     }
 }
