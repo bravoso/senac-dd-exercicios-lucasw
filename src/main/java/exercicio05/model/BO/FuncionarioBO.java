@@ -10,7 +10,7 @@ public class FuncionarioBO {
 		int idGerado = dao.inserir(funcionario);
 		return idGerado > 0;
 	}
-	public Funcionario buscarProdutoPorId(String textoId) {
+	public Funcionario buscarFuncionarioPorId(String textoId) {
 		Funcionario funcionarioBuscado = dao.obterPorId(Integer.parseInt(textoId));
 		return funcionarioBuscado;
 	}

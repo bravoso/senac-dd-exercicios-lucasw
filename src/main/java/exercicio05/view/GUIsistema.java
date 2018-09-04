@@ -5,8 +5,10 @@
  */
 package exercicio05.view;
 
+import exercicio05.model.BO.FuncionarioBO;
 import exercicio05.model.BO.ProdutoBO;
 import exercicio05.model.DAO.Banco;
+import exercicio05.model.DAO.FuncionarioDAO;
 import exercicio05.model.DAO.ProdutoDAO;
 import exercicio05.model.VO.Funcionario;
 import exercicio05.model.VO.Produto;
@@ -25,6 +27,7 @@ public class GUIsistema extends javax.swing.JFrame {
 	private Funcionario funcionario = new Funcionario();
 	private Produto produto = new Produto();
 	private ProdutoBO bo = new ProdutoBO();
+	private FuncionarioBO fbo = new FuncionarioBO();
 
 	/**
 	 * Creates new form GUIsistema
@@ -524,7 +527,14 @@ public class GUIsistema extends javax.swing.JFrame {
 	}// GEN-LAST:event_btnRemoverActionPerformed
 
 	private void btnRemoverMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_btnRemoverMouseClicked
-		// TODO add your handling code here:
+		FuncionarioDAO dao = new FuncionarioDAO();
+		boolean retorno = dao.remover(Integer.parseInt(txtMatricula.getText()));
+
+		if (retorno == true) {
+			JOptionPane.showMessageDialog(null, "Funcionario removido com sucesso");
+		} else {
+			JOptionPane.showMessageDialog(null, "Erro ao remover funcionario");
+		}
 	}// GEN-LAST:event_btnRemoverMouseClicked
 
 	private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnAtualizarActionPerformed
@@ -532,7 +542,15 @@ public class GUIsistema extends javax.swing.JFrame {
 	}// GEN-LAST:event_btnAtualizarActionPerformed
 
 	private void btnAtualizarMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_btnAtualizarMouseClicked
-		// TODO add your handling code here:
+		funcionario = fbo.buscarFuncionarioPorId(txtMatricula.getText());
+
+		if (funcionario != null) {
+			// Preencher os campos da tela
+			txtNome.setText(funcionario.getNome());
+			txtCPF.setText(funcionario.getCpf());
+		} else {
+			JOptionPane.showMessageDialog(null, "Produto não encontrado");
+		}
 	}// GEN-LAST:event_btnAtualizarMouseClicked
 
 	private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnAdicionarActionPerformed
